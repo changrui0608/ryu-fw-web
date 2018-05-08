@@ -2,4 +2,10 @@
 
 {% block content %}
 <h2>Error</h2>
+
+<p>{{ exc_name }}</p>
+
+<p>{{ exception.message }}</p>
+
+<p>{{ exception.response.content }}</p>
 {% endblock %}

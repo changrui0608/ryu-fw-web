@@ -31,10 +31,20 @@ urlpatterns = [
     url(r'^status/disable/$', views.status_disable, name='status_disable_all'),
     url(r'^status/disable/(?P<sw>[0-9]+)/$', views.status_disable, name='status_disable'),
     
-    
     # all -- show all detailed rules
+    url(r'^rules/$', views.rules, name='rules'),
+    url(r'^rules/add/$', views.rules_add, name='rules_add'),
+    url(r'^rules/delete/(?P<rule_id>[0-9]+)/$', views.rules_delete, name='rules_delete'),
+    url(r'^rules/delete/$', views.rules_delete, name='rules_delete_all'),
 
-    # IP / IP range -- a quick entry for set rules based on IP / IP range
-
+    # shortcut for global rules
+    url(r'^rules/allow_all/$', views.rules_allow_all, name='rules_allow_all'),
+    url(r'^rules/deny_all/$', views.rules_deny_all, name='rules_deny_all'),
     
+    # IP / IP range -- a quick entry for set rules based on IP / IP range
+    url(r'^ip-rules/$', views.ip_rules, name='ip_rules'),
+    url(r'^ip-rules/add/$', views.ip_rules_add, name='ip_rules_add'),
+    url(r'^ip-rules/delete/(?P<rule_id>[0-9]+)/$', views.ip_rules_delete, name='ip_rules_delete'),
+    url(r'^ip-rules/delete/$', views.ip_rules_delete, name='ip_rules_delete_all'),
+
 ]
