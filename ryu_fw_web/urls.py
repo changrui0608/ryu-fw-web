@@ -41,7 +41,7 @@ urlpatterns = [
     url(r'^rules/allow_all/$', views.rules_allow_all, name='rules_allow_all'),
     url(r'^rules/deny_all/$', views.rules_deny_all, name='rules_deny_all'),
     
-    # IP / IP range -- a quick entry for set rules based on IP / IP range
+    # IP / IP range -- a quick entry for check / set rules based on IP / IP range
     url(r'^ip-rules/$', views.ip_rules, name='ip_rules'),
     url(r'^ip-rules/add/$', views.ip_rules_add, name='ip_rules_add'),
     url(r'^ip-rules/delete/(?P<rule_id>[0-9]+)/$', views.ip_rules_delete, name='ip_rules_delete'),
