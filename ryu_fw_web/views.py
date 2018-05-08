@@ -6,9 +6,9 @@ from django.conf import settings as django_settings
 from django import forms
 from django.urls import reverse
 
-import api
+from . import api
 from .forms import RuleForm, IPAddrRuleForm, SimplifiedRuleForm
-from rules import ALLOW_RULES, DENY_RULES
+from .rules import ALLOW_RULES, DENY_RULES
 from . import utils
 
 
